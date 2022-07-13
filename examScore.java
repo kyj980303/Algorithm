@@ -7,7 +7,7 @@ public class examScore {
     System.out.println("시험 점수를 입력해주세요 : ");
     int scoreNo = keyboardInput.nextInt();
     
-    if (scoreNo <= 100  && scoreNo >= 90) {
+    if (scoreNo <= 100 && scoreNo >= 90) {
       System.out.println("A");
     } else if (scoreNo < 90  && scoreNo >= 80) {
       System.out.println("B");
@@ -17,7 +17,8 @@ public class examScore {
       System.out.println("D");
     } else if (scoreNo < 60) {
       System.out.println("F");
+    } else{
+      keyboardInput.close();
     }
-    keyboardInput.close();
   }
 }
