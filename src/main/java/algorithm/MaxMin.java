@@ -16,7 +16,7 @@ public class MaxMin {
       len[i] = keyboard.nextInt();
     }
 
-    int max = 0;
+    int max = -9999999;
     int min = 9999999;
 
     for (int i = 0; i < num; i++) {
