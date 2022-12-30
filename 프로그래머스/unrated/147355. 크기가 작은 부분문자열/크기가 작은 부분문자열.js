@@ -10,7 +10,7 @@ function solution(t, p) {
         if (split.length === len) {
             arr.push(split);
         }
-    }
+    } 
     
     // 쪼갠 배열의 원소들이 p보다 작거나 같은경우를 구한다.
     for (let i = 0; i < arr.length; i++) {
