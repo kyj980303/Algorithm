@@ -1,14 +1,14 @@
-const fs = require('fs');
-const filePath = process.platform === 'linux' ? '/dev/stdin' : './input.txt';
-let input = fs.readFileSync(filePath).toString().trim().split('\n');
-let n = Number(input[0]);
+let fs = require("fs");
+let input = fs.readFileSync('/dev/stdin').toString().trim().split(" ");
+input = Number(input[0]);
 
-function fibonacci(n) {
-
-    if (n < 2) {
-      return n; //2보다 작은 수는 그 값을 리턴하므로 조건을 생성
-    } else {
-      return fibonacci(n - 1) + fibonacci(n - 2);
-    }
+// N번째 피보나치 수 구하기
+// 피보나치수 : 첫 번째 숫자는 0, 두 번쨰 숫자는 1, 세 번쨰 숫자부터 앞에 수를 더한 값이 된다. 따라서 1, 네 번쨰 숫자는 2
+function solution(num) {
+  if (num < 2) {
+    return num;
+  } else {
+    return solution(num - 1) + solution(num - 2);
+  }
 }
-console.log(fibonacci(n));
+console.log(solution(input));
